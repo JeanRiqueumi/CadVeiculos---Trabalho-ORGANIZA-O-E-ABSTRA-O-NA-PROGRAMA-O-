@@ -32,7 +32,7 @@ void main() {
             }
             case 4 -> {
                 editar();
-                IO.readln("Pressione Enter para Continuar")
+                IO.readln("Pressione Enter para Continuar");
             }
             case 0 -> {
                 IO.println("Volte sempre!!!");
@@ -85,6 +85,33 @@ void cadastrar() {
 
 }
 
+void editar() {
+    listar();
+    String nomeAntigo = IO.readln("Digite o nome do veículo que desja editar: ");
+
+    int indiceEncontrado = -1;
+
+    for (int i = 0; i < veiculos.size(); i++) {
+        if (veiculos.get(i).equalsIgnoreCase(nomeAntigo)) {
+            indiceEncontrado = i;
+            break;
+        }
+    }
+
+    if (indiceEncontrado != -1) {
+        String novoNome = IO.readln("Digite o novo nome para o veículo: ");
+        novoNome = novoNome.trim();
+
+        if (novoNome.isEmpty()) {
+            IO.println("Nome inválido!");
+        } else {
+            veiculos.set(indiceEncontrado, novoNome);
+            IO.println("Veículo atualizado com sucesso!");
+        }
+    } else {
+        IO.println("Veículo não encontrado na lista.");
+    }
+}
 
 void listar() {
     for (int i = 1; i <= veiculos.size(); i++) {
