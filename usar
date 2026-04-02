@@ -1,0 +1,14 @@
+veiculo.equalsIgnoreCase(veiculo) -> nao deixar cadastrar o mesmo carro 2vz
+
+veiculo.contains(veiculo) -> buscar veículo
+
+veiculos.set -> editar veiculo
+
+bouble sort ou select sort para ordenaçao da lista
+
+remover veiculo por nome 
+
+
+1 - feito
+2 - Marcos fazendo
+5 - eu fazendo
